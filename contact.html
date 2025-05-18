@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Nexora</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+            border-color: #86b7fe;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+        }
+        
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.8);
+            z-index: 9999;
+        }
+        
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .alert {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            min-width: 300px;
+        }
+
+        .contact-info-item {
+            transition: all 0.3s ease;
+        }
+
+        .contact-info-item:hover {
+            transform: translateX(10px);
+        }
+
+        .contact-info-item i {
+            transition: all 0.3s ease;
+        }
+
+        .contact-info-item:hover i {
+            transform: scale(1.2);
+            color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="Nexora Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Hizmetler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-white">
+                    <h1 class="display-4 fw-bold">İletişim</h1>
+                    <p class="lead">Bizimle iletişime geçin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Bize Ulaşın</h3>
+                            <form id="contactForm" action="/submit-form" method="POST" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Ad Soyad</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-posta</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Telefon</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Mesajınız</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="file" class="form-label">Dosya Ekle (Opsiyonel)</label>
+                                    <input type="file" class="form-control" id="file" accept=".pdf,.doc,.docx,.txt,.zip,.rar">
+                                    <small class="text-muted">Desteklenen formatlar: PDF, DOC, DOCX, TXT, ZIP, RAR (Maksimum dosya boyutu: 10MB)</small>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Gönder</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Info -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">İletişim Bilgileri</h3>
+                            <div class="d-flex mb-4 contact-info-item">
+                                <i class="fas fa-map-marker-alt fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5>Adres</h5>
+                                    <p class="mb-0">Atatürk Cad. No:123<br>34000 İstanbul, Türkiye</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4 contact-info-item">
+                                <i class="fas fa-phone fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5>Telefon</h5>
+                                    <p class="mb-0">+90 555 123 4567</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4 contact-info-item">
+                                <i class="fas fa-envelope fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5>E-posta</h5>
+                                    <p class="mb-0">info@nexora.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex contact-info-item">
+                                <i class="fas fa-clock fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5>Çalışma Saatleri</h5>
+                                    <p class="mb-0">Pazartesi - Cuma: 09:00 - 18:00<br>Cumartesi: 10:00 - 14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-4">Konum</h3>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-0">
+                            <div class="ratio ratio-21x9">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192698.6596245466!2d28.871754966406248!3d41.005495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1647881764471!5m2!1str!2str" 
+                                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Spinner -->
+    <div class="loading">
+        <div class="loading-spinner">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Yükleniyor...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Messages -->
+    <div class="alert alert-success" role="alert">
+        Mesajınız başarıyla gönderildi!
+    </div>
+    <div class="alert alert-danger" role="alert">
+        Bir hata oluştu. Lütfen tekrar deneyin.
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>İletişim</h5>
+                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i> Atatürk Cad. No:123</p>
+                    <p class="mb-1"><i class="fas fa-phone me-2"></i> +90 555 123 4567</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i> info@nexora.com</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Sosyal Medya</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bülten</h5>
+                    <p>Yeniliklerden haberdar olmak için bültenimize abone olun.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="E-posta adresiniz">
+                        <button class="btn btn-primary">Abone Ol</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Nexora. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz - Kurumsal Web Sitesi</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="TECHNOVA Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Hizmetler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-white">
+                    <h1 class="display-4 fw-bold">Hizmetlerimiz</h1>
+                    <p class="lead">Profesyonel çözümler ve kaliteli hizmetler</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+                            <h6 class="card-title">Web Geliştirme</h6>
+                            <p class="card-text">Modern ve responsive web siteleri geliştiriyoruz. HTML5, CSS3 ve JavaScript teknolojileri ile özel çözümler sunuyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                            <h6 class="card-title">Mobil Uygulama</h6>
+                            <p class="card-text">iOS ve Android platformları için native uygulamalar geliştiriyoruz. Kullanıcı dostu arayüzler ve performanslı çözümler.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                            <h6 class="card-title">Dijital Pazarlama</h6>
+                            <p class="card-text">SEO, sosyal medya yönetimi ve içerik pazarlama stratejileri ile online varlığınızı güçlendiriyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-server fa-3x text-primary mb-3"></i>
+                            <h6 class="card-title">Sunucu Yönetimi</h6>
+                            <p class="card-text">7/24 sunucu yönetimi ve teknik destek hizmetleri ile sistemlerinizin kesintisiz çalışmasını sağlıyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Sıkça Sorulan Sorular</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Web sitesi geliştirme süreci ne kadar sürer?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Web sitesi geliştirme süreci, projenin kapsamına ve karmaşıklığına göre değişiklik gösterir. Basit bir kurumsal web sitesi için ortalama 2-4 hafta, daha karmaşık projeler için 2-3 ay sürebilir.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Mobil uygulama geliştirme maliyetleri nedir?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Mobil uygulama geliştirme maliyetleri, uygulamanın özelliklerine, platform seçimine ve geliştirme sürecine göre değişiklik gösterir. Detaylı bir fiyat teklifi için bizimle iletişime geçebilirsiniz.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    SEO çalışmaları ne kadar sürede sonuç verir?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    SEO çalışmaları uzun vadeli bir süreçtir ve ilk sonuçlar genellikle 3-6 ay içinde görülmeye başlar. Sektörünüzün rekabet durumuna ve web sitenizin mevcut durumuna göre bu süre değişiklik gösterebilir.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Projenizi Hayata Geçirelim</h2>
+                    <p class="lead mb-4">Size özel çözümler için hemen iletişime geçin.</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Bize Ulaşın</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>İletişim</h5>
+                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i> Atatürk Cad. No:123</p>
+                    <p class="mb-1"><i class="fas fa-phone me-2"></i> +90 555 123 4567</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i> info@sirket.com</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Sosyal Medya</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bülten</h5>
+                    <p>Yeniliklerden haberdar olmak için bültenimize abone olun.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="E-posta adresiniz">
+                        <button class="btn btn-primary">Abone Ol</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Şirket Adı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+    <!-- Ana Logo Sembolü -->
+    <g transform="translate(10, 10)">
+        <!-- Daire Arka Plan -->
+        <circle cx="15" cy="15" r="15" fill="#E0770A" opacity="0.1"/>
+        
+        <!-- Teknoloji Sembolü -->
+        <path d="M15 5 L25 15 L15 25 L5 15 Z" fill="#E0770A"/>
+        <circle cx="15" cy="15" r="3" fill="#E0770A"/>
+        
+        <!-- Bağlantı Çizgileri -->
+        <path d="M15 5 L15 25" stroke="#E0770A" stroke-width="2" fill="none"/>
+        <path d="M5 15 L25 15" stroke="#E0770A" stroke-width="2" fill="none"/>
+    </g>
+    
+    <!-- Şirket Adı -->
+    <text x="45" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#343a40">
+        NEXORA
+    </text>
+</svg> 
